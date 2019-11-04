@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "required": ["name"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "lotNumber": {
+      "type": "number"
+    },
+    "direction": {
+      "type": "string"
+    },
+    "purification": {
+      "type": "string"
+    },
+    "tmCalculated": {
+      "type": "string"
+    },
+    "dateOrdered": {
+      "type": "string"
+    },
+    "dateDestroyed": {
+      "type": "string"
+    },
+    "application": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "supplier": {
+      "type": "string"
+    },
+    "designedBy": {
+      "type": "string"
+    },
+    "stockConcentration": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "litReference": {
+      "type": "string"
+    },
+    "primerSequence": {
+      "type": "string"
+    },
+    "miSeqHiSeqIndexSequence": {
+      "type": "string"
+    },
+    "miniSeqNextSeqIndexSequence": {
+      "type": "string"
+    }
+  }
+}

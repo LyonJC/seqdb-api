@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "required": ["groupName"],
+  "additionalProperties": false,
+  "properties": {
+    "groupName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

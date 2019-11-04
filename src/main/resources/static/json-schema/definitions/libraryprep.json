@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [],
+  "additionalProperties": false,
+  "properties": {
+    "inputNg": {
+      "type": "number"
+    },
+    "quality": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "wellColumn": {
+      "type": "number"
+    },
+    "wellRow": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": ["type", "value"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "outputs": {
+      "type": "array"
+    },
+    "supports": {
+      "type": "array"
+    }
+  }
+}

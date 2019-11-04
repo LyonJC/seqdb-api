@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": ["name"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "totalLibraryYieldNm": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "cleanUpNotes": {
+      "type": "string"
+    },
+    "yieldNotes": {
+      "type": "string"
+    }
+  }
+}

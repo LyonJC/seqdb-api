@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [],
+  "additionalProperties": false,
+  "properties": {
+    "wellColumn": {
+      "type": "number"
+    },
+    "wellRow": {
+      "type": "string"
+    },
+    "dateMoved": {
+      "type": "string"
+    },
+    "lastModified": {
+      "type": "string"
+    }
+  }
+}

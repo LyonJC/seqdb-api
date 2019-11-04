@@ -1,0 +1,97 @@
+{
+  "type": "object",
+  "required": ["name", "type", "seq", "lotNumber"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "seq": {
+      "type": "string"
+    },
+    "lotNumber": {
+      "type": "number"
+    },
+    "version": {
+      "type": "number"
+    },
+    "direction": {
+      "type": "string"
+    },
+    "tmCalculated": {
+      "type": "string"
+    },
+    "tmPe": {
+      "type": "number"
+    },
+    "position": {
+      "type": "string"
+    },
+    "storage": {
+      "type": "string"
+    },
+    "restrictionSite": {
+      "type": "string"
+    },
+    "used4sequencing": {
+      "type": "boolean"
+    },
+    "used4qrtpcr": {
+      "type": "boolean"
+    },
+    "used4nestedPcr": {
+      "type": "boolean"
+    },
+    "used4genotyping": {
+      "type": "boolean"
+    },
+    "used4cloning": {
+      "type": "boolean"
+    },
+    "used4stdPcr": {
+      "type": "boolean"
+    },
+    "referenceSeqDir": {
+      "type": "string"
+    },
+    "referenceSeqFile": {
+      "type": "string"
+    },
+    "urllink": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "lastModified": {
+      "type": "string"
+    },
+    "application": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "targetSpecies": {
+      "type": "string"
+    },
+    "supplier": {
+      "type": "string"
+    },
+    "dateOrdered": {
+      "type": "string"
+    },
+    "purification": {
+      "type": "string"
+    },
+    "designedBy": {
+      "type": "string"
+    },
+    "stockConcentration": {
+      "type": "string"
+    }
+  }
+}

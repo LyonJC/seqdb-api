@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "required": ["name", "baseType", "numberOfColumns", "numberOfRows"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "baseType": {
+      "type": "string"
+    },
+    "numberOfColumns": {
+      "type": "number"
+    },
+    "numberOfRows": {
+      "type": "number"
+    },
+    "numberOfWells": {
+      "type": "number"
+    },
+    "lastModified": {
+      "type": "string"
+    }
+  }
+}

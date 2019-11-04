@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": ["name"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "number"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "upc": {
+      "type": "string"
+    },
+    "lastModified": {
+      "type": "string"
+    }
+  }
+}

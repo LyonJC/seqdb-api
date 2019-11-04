@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "required": ["containerNumber", "fillByRow"],
+  "additionalProperties": false,
+  "properties": {
+    "containerNumber": {
+      "type": "string"
+    },
+    "fillByRow": {
+      "type": "boolean"
+    },
+    "lastModified": {
+      "type": "string"
+    }
+  }
+}
