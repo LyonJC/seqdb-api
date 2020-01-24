@@ -1,6 +1,22 @@
-FROM openjdk:8-jre-slim
-RUN useradd -s /bin/bash user
-USER user
-COPY --chown=644 target/seqdb.api-*.jar /seqdb-api.jar
+# syntax=docker/dockerfile:experimental
+FROM maven:3.6.3-jdk-8-slim as build
+
+WORKDIR /workspace/app
+
+COPY pom.xml .
+COPY src src
+copy lib lib
+
+RUN --mount=type=cache,target=/root/.m2 mvn install -DskipTests
+RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+
 EXPOSE 8080
-ENTRYPOINT ["java","-XX:+UnlockExperimentalVMOptions","-XX:+UseCGroupMemoryLimitForHeap","-jar","/seqdb-api.jar"]
+
+FROM maven:3.6.3-jdk-8-slim
+VOLUME /tmp
+ARG DEPENDENCY=/workspace/app/target/dependency
+COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
+COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
+COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
+ENTRYPOINT ["java","-cp","app:app/lib/*","ca.gc.aafc.seqdb.api.SeqdbApiLauncher"]
+

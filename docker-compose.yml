@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  database:
+    image: postgres:9.6.15-alpine
+    restart: always
+    env_file:
+     - ./env/db.env
+    volumes:
+      - ./schema:/docker-entrypoint-initdb.d
+      - database-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+
+  seqdb-api:
+    image: img_seqdb_api
+    restart: always
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./env/app.env
+
+volumes:
+  database-data:
