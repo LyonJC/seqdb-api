@@ -7,7 +7,7 @@ services:
      - ./env/db.env
     volumes:
       - ./schema:/docker-entrypoint-initdb.d
- #     - database-data:/var/lib/postgresql/data
+      - database-data:/var/lib/postgresql/data
 
   database_kc:
     image: postgres
@@ -35,5 +35,5 @@ services:
 
 
 volumes:
-#  database-data:
+  database-data:
   database-data-kc:
