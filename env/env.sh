@@ -1,4 +1,4 @@
-#env.sh
+# env.sh
 
 source ./env/env_proj.sh
 

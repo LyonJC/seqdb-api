@@ -2,24 +2,38 @@ version: "3"
 
 services:
   database:
-    image: postgres:9.6.15-alpine
-    restart: always
+    image: postgres
     env_file:
      - ./env/db.env
     volumes:
       - ./schema:/docker-entrypoint-initdb.d
-      - database-data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+ #     - database-data:/var/lib/postgresql/data
 
+  database_kc:
+    image: postgres
+    env_file:
+      - env/db_kc.env
+    volumes:
+      - database-data-kc:/var/lib/postgresql/data
+
+  keycloak:
+    image: jboss/keycloak
+    depends_on:
+      - database_kc
+    env_file:
+      - ./env/auth.env
+    ports:
+      - "8080:8080"
 
   seqdb-api:
     image: img_seqdb_api
-    restart: always
-    ports:
-      - "8080:8080"
+    depends_on:
+      - database
+      - keycloak
     env_file:
       - ./env/app.env
 
+
 volumes:
-  database-data:
+#  database-data:
+  database-data-kc:
