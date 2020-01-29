@@ -7,33 +7,33 @@ services:
      - ./env/db.env
     volumes:
       - ./schema:/docker-entrypoint-initdb.d
- #     - database-data:/var/lib/postgresql/data
+      - database-data:/var/lib/postgresql/data
 
- # database_kc:
- #   image: postgres
- #   env_file:
- #     - env/db_kc.env
- #   volumes:
- #     - database-data-kc:/var/lib/postgresql/data
+  database_kc:
+    image: postgres
+    env_file:
+      - env/db_kc.env
+    volumes:
+      - database-data-kc:/var/lib/postgresql/data
 
-#  keycloak:
-#    image: jboss/keycloak
-#    depends_on:
-#      - database_kc
-#    env_file:
- #     - ./env/auth.env
- #   ports:
-#      - "8080:8080"
+  keycloak:
+    image: jboss/keycloak
+    depends_on:
+      - database_kc
+    env_file:
+     - ./env/auth.env
+    ports:
+      - "8080:8080"
 
   seqdb-api:
     image: img_seqdb_api
     depends_on:
       - database
-#      - keycloak
+      - keycloak
     env_file:
       - ./env/app.env
 
 
-#volumes:
-#  database-data:
-#  database-data-kc:
+volumes:
+  database-data:
+  database-data-kc:
