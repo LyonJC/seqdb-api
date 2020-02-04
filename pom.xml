@@ -19,7 +19,7 @@
     <local-javax-jaxb.version>2.3.0.1</local-javax-jaxb.version>
     <javax.activation.version>1.1.1</javax.activation.version>
     <javax.interceptor-api>1.2.2</javax.interceptor-api>
-    <keycloak-spring-boot-starter.version>4.3.0.Final</keycloak-spring-boot-starter.version>
+    <keycloak-spring-boot-starter.version>8.0.1</keycloak-spring-boot-starter.version>
     <rsql-jpa.version>2.0.2</rsql-jpa.version>
 	
     <!-- seqdb.dbi & seqdb.testjar are pulled from lib/ folder -->
